@@ -7,7 +7,12 @@ Rails.application.routes.draw do
   # Resource route (maps HTTP verbs to controller actions automatically):
   resources :articles do
     resources :comments
+    resources :tags
   end
+
+  # resources :tags do
+  #   resources :articles
+  # end
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
@@ -17,6 +22,7 @@ Rails.application.routes.draw do
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
+  get 'tags/:tag', to: 'articles#index', as: :tag
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products

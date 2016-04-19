@@ -1,0 +1,9 @@
+<%= form_for([@article, @article.tags.build]) do |f| %>
+  <p>
+    <%= f.label :keyword %><br>
+    <%= f.text_field :keyword %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

@@ -1,20 +1,29 @@
-<h1>List of All Articles</h1>
+<h1>Index of Articles</h1>
 
 <%= link_to 'New Article', new_article_path %>
 <table>
     <tr>
         <th>Title</th>
         <th>Text</th>
+        <th>Tags</th>
         <th colspan="3"></th>
     </tr>
 
-    <% @articles.each do |article| %>
+    <% if @articles.any? %>
+        <% @articles.each do |article| %>
+            <tr>
+                <td><%= article.title %></td>
+                <td><%= article.text %></td>
+                <td><%= raw article.all_tags.split(",").map { |t| link_to t.strip, tag_path(t.strip) }.join(', ') %></td>
+                <td><%= link_to 'Show', article_path(article) %></td>
+                <td><%= link_to 'Edit', edit_article_path(article) %></td>
+                <td><%= link_to 'Destroy', article_path(article), method: :delete, data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+            </tr>
+        <% end %>
+    <% else %>
         <tr>
-            <td><%= article.title %></td>
-            <td><%= article.text %></td>
-            <td><%= link_to 'Show', article_path(article) %></td>
-            <td><%= link_to 'Edit', edit_article_path(article) %></td>
-            <td><%= link_to 'Destroy', article_path(article), method: :delete, data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+            <td colspan="3">No matching articles found.</td>
         </tr>
     <% end %>
 </table>
+<%= link_to 'Index of All Articles', articles_path %>

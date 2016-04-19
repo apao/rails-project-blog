@@ -8,6 +8,8 @@
     <%= @article.text %>
 </p>
 
+<p><strong>Tags:</strong> <%= @article.all_tags %></p>
+
 <h2>Comments</h2>
 <%= render @article.comments %>
 

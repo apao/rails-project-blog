@@ -1,20 +1,22 @@
-<p>
-    <strong>Title:</strong>
-    <%= @article.title %>
-</p>
+<!-- .container is main centered wrapper -->
+<div class="container">    
 
-<p>
-    <strong>Text:</strong>
-    <%= @article.text %>
-</p>
+    <h2><%= @article.title %></h2>
+    <em>First posted <%= time_ago_in_words(@article.created_at) %> ago</em> | <strong>Tagged:</strong> <%= raw @article.all_tags.split(",").map { |t| link_to t.strip, tag_path(t.strip) }.join(', ') %>
+    <p></p>
+    <p><%= @article.text %></p>
 
-<p><strong>Tags:</strong> <%= @article.all_tags %></p>
+    <div class="row">
+        <div class="six columns">
+            <h5>Comments</h5>
+            <%= render @article.comments %>
+        </div>
+        <div class="six columns">
+            <h5>Add a Comment:</h5>
+            <%= render 'comments/form' %>
+        </div>
+    </div>
 
-<h2>Comments</h2>
-<%= render @article.comments %>
-
-<h2>Add a Comment:</h2>
-<%= render 'comments/form' %>
-
-<%= link_to 'Edit', edit_article_path(@article) %> | 
-<%= link_to 'Back', articles_path %>
+    <%= link_to 'Edit', edit_article_path(@article) %> | 
+    <%= link_to 'Back to Index', articles_path %>
+</div> <!-- .container is main centered wrapper -->

@@ -66,39 +66,39 @@ See all articles with a specific tag.
 
 ## Building this App - Resources
 
-1. Followed these instructions (https://gist.github.com/rebeccacaroline/d51a0dbfac4a220694affa043066a8d2) to install Rbenv and default Ruby.
-2. Loaded Rbenv automatically in terminal by appending the following to `~/.bash_profile`:
-`eval "$(rbenv init -)"`
-3. To use Rbenv-installed Ruby:
+*   Followed these instructions (https://gist.github.com/rebeccacaroline/d51a0dbfac4a220694affa043066a8d2) to install Rbenv and default Ruby.
+*   Loaded Rbenv automatically in terminal by appending the following to `~/.bash_profile`:
+    `eval "$(rbenv init -)"`
+*   To use Rbenv-installed Ruby:
 
-Open new terminal window, or
+    Open new terminal window, or
 
-In existing terminal window, type:
-`source ~/.bash_profile`
+    In existing terminal window, type:
+    `source ~/.bash_profile`
 
-4. Followed full Rails "Getting Started" tutorial: 
+*   Followed full Rails "Getting Started" tutorial: 
 
-http://guides.rubyonrails.org/getting_started.html
+    http://guides.rubyonrails.org/getting_started.html
 
-5. Consulted additional websites and tutorials to build tagging feature:
+*   Consulted additional websites and tutorials to build tagging feature:
 
-Many-to-many relationships in Rails - http://guides.rubyonrails.org/association_basics.html#the-has-and-belongs-to-many-association
+    Many-to-many relationships in Rails - http://guides.rubyonrails.org/association_basics.html#the-has-and-belongs-to-many-association
 
-Testing in Rails - http://guides.rubyonrails.org/testing.html
+    Testing in Rails - http://guides.rubyonrails.org/testing.html
 
-Using Rails link_to with button elements in HTML/CSS - http://stackoverflow.com/questions/24847018/rails-link-to-not-working-within-a-button-element
+    Using Rails link_to with button elements in HTML/CSS - http://stackoverflow.com/questions/24847018/rails-link-to-not-working-within-a-button-element
 
-Creating a standalone migration - http://guides.rubyonrails.org/active_record_migrations.html
+    Creating a standalone migration - http://guides.rubyonrails.org/active_record_migrations.html
 
-Building a Tagging Feature from Scratch - http://www.sitepoint.com/tagging-scratch-rails/
+    Building a Tagging Feature from Scratch - http://www.sitepoint.com/tagging-scratch-rails/
 
-Tagging - http://railscasts.com/episodes/382-tagging
+    Tagging - http://railscasts.com/episodes/382-tagging
 
-6. Consulted additional website to utilize Skeleton CSS boilerplate:
+*   Consulted additional website to utilize Skeleton CSS boilerplate:
 
-Understanding the Asset Pipeline - http://guides.rubyonrails.org/asset_pipeline.html
+    Understanding the Asset Pipeline - http://guides.rubyonrails.org/asset_pipeline.html
 
-Skeleton CSS Boilerplate - http://getskeleton.com/
+    Skeleton CSS Boilerplate - http://getskeleton.com/
 
 # Learn More about the Developer
 
